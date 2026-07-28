@@ -1,24 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Images</title>
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="gallery-container">
-    <img id="featured" class="main-img" src="https://picsum.photos/id/10/400/400" alt="Featured Image">
-    
-    <div class="thumbnail-container">
-        <img class="thumb-img" src="https://picsum.photos/id/10/400/400" onclick="changeImage(this.src)">
-        <img class="thumb-img" src="https://picsum.photos/id/20/400/400" onclick="changeImage(this.src)">
-        <img class="thumb-img" src="https://picsum.photos/id/30/400/400" onclick="changeImage(this.src)">
-        <img class="thumb-img" src="https://picsum.photos/id/40/400/400" onclick="changeImage(this.src)">
-    </div>
-</div>
+<header>
+  <h1>My Project</h1>
+  <button id="themeToggle" onclick="ToggleMode()"><i class="fa-solid fa-moon"></i> <span id="themeLabel" >Dark Mode</span></button>
+</header>
 
-<script src="script.js"></script>
+<main>
+git init
+  <section class="card" id="authCard">
+
+    <div id="signupView">
+      <h2>Create Your Account</h2>
+      <p class="sub">All fields are validated with JavaScript before the form can be submitted.</p>
+
+      <form id="signupForm" novalidate>
+        <div class="form-grid">
+          <div>
+            <label for="su-name">Full Name</label>
+            <input type="text" id="su-name" placeholder="e.g. Moaz Essam">
+            <div class="error-msg" id="err-name"></div>
+          </div>
+          <div>
+            <label for="su-email">Email</label>
+            <input type="email" id="su-email" placeholder="e.g. example@gamil.com">
+            <div class="error-msg" id="err-email"></div>
+          </div>
+          <div>
+            <label for="su-age">Age</label>
+            <input type="number" id="su-age" placeholder="e.g. 14">
+            <div class="error-msg" id="err-age"></div>
+          </div>
+          <div>
+            <label for="su-pass">Password</label>
+            <input type="password" id="su-pass" placeholder="At least 6 characters">
+            <div class="error-msg" id="err-pass"></div>
+          </div>
+          <div>
+            <label for="su-confirm">Confirm Password</label>
+            <input type="password" id="su-confirm" placeholder="Repeat your password">
+            <div class="error-msg" id="err-confirm"></div>
+          </div>
+          <div>
+            <label for="su-country">Country</label>
+            <select id="su-country">
+              <option value="">-- Select a country --</option>
+              <option>Kuwait</option>
+              <option>United States</option>
+              <option>United Kingdom</option>
+              <option>Canada</option>
+              <option>Egypt</option>
+              <option>India</option>
+              <option>Other</option>
+            </select>
+            <div class="error-msg" id="err-country"></div>
+          </div>
+          <div class="full-span">
+            <label>Gender</label>
+            <div class="radio-row">
+              <label><input type="radio" name="su-gender" value="Male"> Male</label>
+              <label><input type="radio" name="su-gender" value="Female"> Female</label>
+            </div>
+            <div class="error-msg" id="err-gender"></div>
+          </div>
+          <div class="full-span">
+            <button type="submit" class="btn-primary">Create Account</button>
+            <div class="status-msg" id="signupStatus"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="loginView" style="display:none;">
+      <h2>Log In</h2>
+      <p class="sub">Enter the email and password you just signed up with.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="form-grid">
+          <div>
+            <label for="li-email">Email</label>
+            <input type="email" id="li-email" placeholder="e.g. example@gmail.com">
+            <div class="error-msg" id="err-li-email"></div>
+          </div>
+          <div>
+            <label for="li-pass">Password</label>
+            <input type="password" id="li-pass" placeholder="Your password">
+            <div class="error-msg" id="err-li-pass"></div>
+          </div>
+          <div class="full-span">
+            <button type="submit" class="btn-primary">Log In</button>
+            <div class="status-msg" id="loginStatus"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h2>To-Do List</h2>
+      <div class="todo-input-row">
+        <input type="text" id="todoInput" placeholder="What do you need to do?">
+        <button type="button" class="btn-primary" id="todoAddBtn">Add Task</button>
+      </div>
+      <div class="todo-count"><span class="badge" id="todoCount">0</span> task(s) remaining</div>
+      <ul id="todoList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Live Character Counter</h2>
+      <textarea id="counterBox" maxlength="150" placeholder="Start typing your message here..." rows="4"></textarea>
+      <div class="counter-label" id="counterLabel">0 characters</div>
+    </section>
+  </div>
+
+  <div class="grid-2">
+    <section class="card">
+      <h2>Image Gallery</h2>
+      <img id="mainImage" src="" alt="Selected gallery image">
+      <div class="thumb-row" id="thumbRow"></div>
+    </section>
+
+    <section class="card">
+      <h2>Simple Calculator</h2>
+      <div class="calc-inputs">
+        <input type="number" id="calcA" placeholder="First number">
+        <input type="number" id="calcB" placeholder="Second number">
+      </div>
+      <div class="calc-ops">
+        <button type="button" data-op="+">+</button>
+        <button type="button" data-op="-">−</button>
+        <button type="button" data-op="*">×</button>
+        <button type="button" data-op="/">÷</button>
+      </div>
+      <div class="calc-result">Result: <span id="calcResult">0</span></div>
+    </section>
+  </div>
+
+</main>
+
+<script src="script2.js"></script>
 </body>
 </html>

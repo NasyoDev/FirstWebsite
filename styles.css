@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  color: #14171c;
+}
+
+header {
+  background: #ffffff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e3e6ee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+#themeToggle {
+  background: #ffffff;
+  border: 1px solid #e3e6ee;
+  color: #14171c;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e3e6ee;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+}
+
+.card .sub {
+  margin: 0 0 15px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=number], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e3e6ee;
+  background: #ffffff;
+  color: #14171c;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #2563eb;
+}
+
+input.invalid, select.invalid {
+  border-color: #ff0000;
+}
+
+.error-msg {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.radio-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.radio-row label {
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.status-msg {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.status-msg.success { color: #16a34a; }
+.status-msg.error { color: #ff0000; }
+
+.grid-2 {
+  display: flex;
+  gap: 20px;
+}
+
+.grid-2 > section {
+  flex: 1;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-grid > div {
+  width: 48%;
+}
+
+.form-grid > div.full-span {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .grid-2 { display: block; }
+  .form-grid > div { width: 100%; }
+}
+
+.todo-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-input-row input {
+  flex: 1;
+}
+
+.todo-count {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 10px 0;
+}
+
+.todo-count .badge {
+  background: #14171c;
+  color: #ffffff;
+  padding: 2px 6px;
+  font-weight: bold;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f7fb;
+  border: 1px solid #e3e6ee;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+#todoList li.done span {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+#todoList li button {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+#todoList li button:hover {
+  color: #ff0000;
+}
+
+textarea#counterBox {
+  height: 120px;
+}
+
+.counter-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.counter-label.limit {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+#mainImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #e3e6ee;
+  display: block;
+}
+
+.thumb-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumb-row img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  border: 2px solid transparent;
+}
+
+.thumb-row img:hover, .thumb-row img.active {
+  opacity: 1;
+  border-color: #2563eb;
+}
+
+.calc-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.calc-ops {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.calc-ops button {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.calc-ops button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.calc-result {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 12px;
+  padding: 20px;
+}
+
+/* Dark Theme Overrides */
+body.dark-theme {
+  background-color: #12161c;
+  color: #f1f5f9;
+}
+
+body.dark-theme header {
+  background-color: #1e293b;
+  border-bottom-color: #334155;
+}
+
+body.dark-theme #themeToggle {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+body.dark-theme .card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+body.dark-theme input[type=text],
+body.dark-theme input[type=email],
+body.dark-theme input[type=password],
+body.dark-theme input[type=number],
+body.dark-theme select,
+body.dark-theme textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+body.dark-theme #todoList li {
+  background-color: #0f172a;
+  border-color: #334155;
+}
+
+body.dark-theme .todo-count .badge {
+  background: #f1f5f9;
+  color: #12161c;
+}
+
+body.dark-theme .calc-ops button {
+  background-color: #0f172a;
+}
