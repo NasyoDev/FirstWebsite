@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <button id="showAfter3">Show message after 3 seconds</button>
+<div class="gallery-container">
+    <img id="featured" class="main-img" src="https://picsum.photos/id/10/400/400" alt="Featured Image">
+    
+    <div class="thumbnail-container">
+        <img class="thumb-img" src="https://picsum.photos/id/10/400/400" onclick="changeImage(this.src)">
+        <img class="thumb-img" src="https://picsum.photos/id/20/400/400" onclick="changeImage(this.src)">
+        <img class="thumb-img" src="https://picsum.photos/id/30/400/400" onclick="changeImage(this.src)">
+        <img class="thumb-img" src="https://picsum.photos/id/40/400/400" onclick="changeImage(this.src)">
+    </div>
+</div>
 
-  <br><br>
-
-  <button id="startTimeout">Start 5 second timeout</button>
-  <button id="cancelTimeout">Cancel timeout</button>
-
-  <br><br>
-
-  <button id="startCounter">Start counters</button>
-  <button id="stopCounter">Stop counter</button>
-
-  <p id="message"></p>
-  <p id="count">0</p>
-
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
